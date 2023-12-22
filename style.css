@@ -1,8 +1,76 @@
+:root {
+  --background-color: #FAFAFA;
+  --accent-color: #555555;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  background-color: var(--background-color);
   font-family: 'Source Code Pro', monospace;
+}
+
+header {
+  margin: 1.5rem 1rem 0 1rem;
+}
+
+h1 {
+  display: inline-block;
+  visibility: hidden;
+}
+
+#caret {
+  display: inline-block;
+  position: absolute;
+  width: 2ch;
+  height: 2.5rem;
+  background-color: var(--accent-color);
+  opacity: 0.5;
+}
+
+#caret.hide {
+  opacity: 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li, nav a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+nav a:hover, nav a.current {
+  text-decoration: underline;
+}
+
+main {
+  margin: 1.5rem 1rem;
+  max-width: 90%;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  margin: 0 1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  display: inline-block;
 }
