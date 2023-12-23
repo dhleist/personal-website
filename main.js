@@ -29,3 +29,18 @@ setInterval(() => {
     caret.classList.toggle("hide");
   }
 }, 450);
+
+const currentPage = document.querySelector(".current");
+
+let currentPageText = currentPage.textContent;
+currentPage.style.width = `${currentPageText.length}ch`;
+
+setInterval(() => {
+  if (currentPageText.substring(currentPageText.length - 3, currentPageText.length) !== "...") {
+    currentPageText = currentPageText.concat(".");
+  }
+  else {
+    currentPageText = currentPageText.substring(0, currentPageText.length - 3);
+  }
+  currentPage.textContent = currentPageText;
+}, 500);
