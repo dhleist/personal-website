@@ -14,12 +14,13 @@ body {
 }
 
 header {
-  margin: 1.5rem 1rem 0 1rem;
+  max-width: 80%;
+  min-width: 320px;
+  margin: 1.5rem auto;
 }
 
 h1 {
   display: inline-block;
-  visibility: hidden;
 }
 
 #caret {
@@ -36,7 +37,7 @@ h1 {
 }
 
 nav {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 nav ul {
@@ -50,27 +51,111 @@ nav li, nav a {
   color: var(--accent-color);
 }
 
-nav a:hover, nav a.current {
+nav li.current {
+  cursor: wait;
+}
+
+nav li.subdirectory {
+  margin-left: 1ch;
+}
+
+nav a:hover {
   text-decoration: underline;
 }
 
 main {
-  margin: 1.5rem 1rem;
-  max-width: 90%;
+  max-width: 80%;
+  min-width: 320px;
+  margin: 1.5rem auto;
+}
+
+main ul {
+  list-style: none;
+  margin: 0.5rem 0 1rem 0;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent-color);
+  margin: 1rem 0;
+}
+
+h3 {
+  margin: 0.5rem 0;
 }
 
 p {
   margin: 1rem 0;
 }
 
+p a {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+p a:hover {
+  text-decoration: none;
+}
+
+.folder {
+  display: inline-block;
+  margin-right: 2.5rem;
+  text-align: center;
+}
+
+.folder a {
+  color: black;
+  text-decoration: none;
+}
+
+.folder a:hover {
+  text-decoration: underline;
+}
+
+#path {
+  padding: 1rem 0;
+  background-color: #EFEFEF;
+  border-top: 1px solid var(--accent-color);
+}
+
+#path span {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#path a {
+  color: black;
+  text-decoration: underline;
+}
+
+#path a:hover {
+  text-decoration: none;
+}
+
 footer {
-  margin: 0 1rem;
+  position: sticky;
+  bottom: 0;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--accent-color);
 }
 
 footer ul {
   list-style: none;
+  height: 25px;
 }
 
 footer li {
   display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 0.25rem;
+}
+
+footer a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
 }
